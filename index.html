@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Google Mobile Calculator</title>
+</head>
+<body>
+    <div class="main-container">
+        <div id="solution">
+            <i class="fa-solid fa-ellipsis-vertical"> <span class="popup-container">
+                    <ul class="popup-props">
+                        <li class="items" id="history">History</li>
+                        <li class="items" id="theme">change theme</li>
+                        <li class="items">Help</li>
+                    </ul>
+    
+                </span></i>
+            <div id="display-top">|</div>
+            <div id="display-bottom"></div>
+            <i class="fa-solid fa-minus"></i>
+        </div>
+        <div id="digits-symbols">
+            <div class="dands" id="clear-all">AC</div>
+            <div class="dands" id="brackets">( )</div>
+            <div class="dands symbol" id="percentage">%</div>
+            <div class="dands symbol bigger-size" id="divide">÷</div>
+            <div class="dands number" id="seven">7</div>
+            <div class="dands number" id="eight">8</div>
+            <div class="dands number" id="nine">9</div>
+            <div class="dands symbol bigger-size" id="multiply">×</div>
+            <div class="dands number" id="four">4</div>
+            <div class="dands number" id="five">5</div>
+            <div class="dands number" id="six">6</div>
+            <div class="dands symbol" id="minus">-</div>
+            <div class="dands number" id="one">1</div>
+            <div class="dands number" id="two">2</div>
+            <div class="dands number" id="three">3</div>
+            <div class="dands symbol bigger-size" id="plus">+</div>
+            <div class="dands number" id="zero">0</div>
+            <div class="dands number" id="dot">.</div>
+            <div class="dands" id="clear"><i class="fa-solid fa-square-xmark"></i></div>
+            <div class="dands bigger-size" id="equals">=</div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

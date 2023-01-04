@@ -1,0 +1,199 @@
+:root {
+    --first-color: #29343A;
+    --clear-color: #454364;
+    --symbol-bg: #364A5A;
+    --equal-bg: #004D66;
+    --main-bg: #1A1C1E;
+    --numbers-bg: #1D2528;
+    --numbers-color: #B8D4E5;
+    --body-color: #232946;
+    --white: white;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: var(--body-color);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: -3rem;
+}
+
+h2:first-of-type {
+    margin-top: 1rem;
+}
+
+.main-container {
+    width: 50rem;
+    margin: .5rem auto;
+    background: var(--main-bg);
+    border-radius: 1rem;
+    position: relative;
+
+}
+
+/*The area for all calculation solutions*/
+#solution {
+    width: 100%;
+    height: 150px;
+    background: var(--symbol-bg);
+    padding: 0.5rem;
+    color: var(--numbers-color);
+    border-radius: 1rem 1rem 2rem 2rem;
+    overflow: hidden;
+    font-size: 3rem;
+    text-align: right;
+    word-break: break-all;
+    letter-spacing: 0.2rem;
+    position: relative;
+}
+
+/*Ellipsis: press to show history and change theme*/
+.fa-ellipsis-vertical {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/*The container that houses the history and change theme features. hidden by default*/
+.popup-container {
+    visibility: hidden;
+    position: absolute;
+    top: 30%;
+    left: 67%;
+    z-index: 1;
+    width: 160px;
+    background-color: var(--numbers-bg);
+    border-radius: 1rem;
+}
+
+.popup-props {
+    font-size: 1rem;
+    text-align: left;
+    list-style-type: none;
+    padding: 2rem;
+}
+
+.popup-props>li:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.items:hover {
+    color: var(--white);
+}
+
+/*On click of the elipsis, the popup-container becomes visible*/
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+#display-top {
+    margin-top: 1rem;
+}
+
+.fa-minus {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    cursor: pointer;
+}
+
+/*The buttons container*/
+#digits-symbols {
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+/*The actual buttons*/
+.dands {
+    color: var(--numbers-color);
+    font-size: 3rem;
+    text-align: center;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    padding: 3rem;
+}
+
+.dands:hover {
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.symbol,
+#dot,
+#clear,
+#percentage,
+#brackets {
+    background: var(--symbol-bg);
+}
+
+.number {
+    background: var(--numbers-bg);
+}
+
+#clear-all {
+    background: var(--clear-color);
+}
+
+/*Some perculiar buttons*/
+.bigger-size {
+    font-size: 5rem;
+    padding: 2rem;
+}
+
+#equals {
+    background: var(--equal-bg);
+}
+
+#minus {
+    font-size: 6.5rem;
+    text-align: center;
+    Padding-top: 1rem;
+}
+
+/*Size on mobile*/
+@media(max-width: 480px) {
+
+    .main-container {
+        width: 35rem;
+        margin: 5rem auto;
+    }
+
+    .popup-container {
+        left: 55%;
+    }
+
+    .dands {
+        width: 7rem;
+        height: 7rem;
+        font-size: 2.5rem;
+        padding: 1.8rem;
+    }
+    
+    #minus {
+        font-size: 4rem;
+    }
+}
+
+/*Size on tabs*/
+
+@media(max-width: 976px) {
+    .main-container {
+        margin: 10rem auto;
+    }
+}
